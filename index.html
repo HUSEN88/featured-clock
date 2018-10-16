@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>F-Clock</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  	<link rel="stylesheet" type="text/css" href="style.css" />
+
+	</head>
+	<body>
+
+		<div class="container">
+			<h1 class="text-center"> <strong>Featured Clock</strong> </h1>
+			<div class="row">
+				<div class="col-md-12 clock">
+					<div id="clock" class="clock"> </div>
+					<div id="dayMonth" class="dayMonth"> </div>
+				</div>
+				<div id="tabs">	
+					<ul class="nav nav-pills">
+						<li class="active"><a  href="#Timer" data-toggle="tab">CountDown</a> </li>
+						<li ><a href="#stopWatch" data-toggle="tab">StopWatch</a> </li>
+					</ul>
+
+					<div class="tab-content">
+					  	<div class="tab-pane fade in active  timer" id="Timer">
+			          		<h3>Countdown Timer</h3>
+							<div id="timer" class="timer">
+								<input type="number"  id="hours" min="0" value="0" />h:
+								<input type="number"  id="minutes" min="0" value="0" />m:
+								<input type="number"  id="seconds" min="0" value="0" />s
+							</div>
+							<div class="buttons">
+								<button class="btn btn-success" id="start">Start</button>
+								<button class="btn btn-primary" id="reset">Reset</button>
+							</div>
+					  	</div>
+					  	<div class="tab-pane fade stopwatch" id="stopWatch">
+		          			<h3>Stopwatch</h3>
+							<div id="stopwatch" class="stopwatch">00h:00m:00s</div>
+							<div class="buttons">
+								<button class="btn btn-success active" id="startsw">Start</button>
+								<button class="btn btn-danger" id="pausesw" style="display:none">Pause</button>
+								<button class="btn btn-primary" id="resetsw">Reset</button>
+							</div>
+						</div>
+		  			</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="clock.js"></script>
+		<script type="text/javascript" src="stopwatch.js"></script>
+		<script type="text/javascript" src="timer.js"></script>
+	</body>
+</html>
